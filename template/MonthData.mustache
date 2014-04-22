@@ -1,0 +1,31 @@
+
+<ul class="chart_scale clrfix">
+	<li class="scale_item_top">&yen;{{max}}</li>
+    <li class="scale_item_medium">&yen;{{middle}}</li>
+    <li class="scale_item_bottom">&yen;{{min}}</li>
+</ul>
+<div class="chart_cntt_wrapper clrfix">
+	<div class="chart_cntt_scrollbar clrfix">
+    	<ul class="chart_cntt clrfix">
+            {{#list}}
+        	<li class="chart_bar {{cls}}{{#disabled}} disabled{{/disabled}}{{#selected}} selected{{/selected}}" style="z-index: {{zIndex}}" data-index="{{data_index}}" data-date="{{date}}">
+            	<span class="weekday">{{week}}</span>
+                <span class="day">{{day}}</span>
+
+                {{^disabled}}
+                <span class="bar" {{#height}}style="height:{{height}}%;"{{/height}}>
+                	<span class="visually_hidden">{{pr}}</span>
+                </span>
+
+	            {{#pr}}
+                <div class="fuz_chart_tip" style="{{^selected}}display:none;{{/selected}}top:{{tip_height}}%">
+                    &yen;<span>{{pr}}</span>  
+                    <em></em>
+                </div>
+	            {{/pr}}
+                {{/disabled}}
+            </li>
+            {{/list}}
+        </ul>
+    </div>
+</div>

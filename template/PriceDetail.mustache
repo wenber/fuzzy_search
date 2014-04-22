@@ -1,0 +1,7 @@
+
+<div class="c2"><a target="_blank" class="fuz_fly_look" href="http://flight.qunar.com/twell/flight/Search.jsp?fromCity={{from}}&toCity={{to}}&fromDate={{fromDate}}&toDate={{toDate}}&searchType={{type}}&from=inter_sugrili_search">查看航班</a></div>
+<div class="c1">
+    {{#pkg}}{{#pr}}<span class="o_price">原价：<em>&yen;{{pr}}</em></span>{{/pr}}{{/pkg}}
+    <span class="n_price">{{#pkg}}<em>&yen;</em>{{pkg}}{{/pkg}}{{^pkg}}{{#pr}}<em>&yen;</em>{{pr}}{{/pr}}{{/pkg}}</span>
+    <span class="state_price">{{#pkg}}特价<br/>往返包{{/pkg}}{{^pkg}}{{#pr}}成人<br/>票票价{{/pr}}{{/pkg}}</span>
+</div>

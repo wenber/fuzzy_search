@@ -1,0 +1,11 @@
+
+<a href="#" class="month_selector_prev{{^show_prev}} p_disabled{{/show_prev}}" data-btn-prev></a>
+<div class="month_selector_label" data-month-label><span class="js-month-label">{{cur_month}}</span>
+    <span class="month_selector_icon"></span>
+    <ul class="month_selector_months" style="display:none;">
+        {{#months}}
+        <li data-month="{{month}}"><a href="#"><span>{{&pr}}</span>{{label}}</a></li>
+        {{/months}}
+    </ul>
+</div>
+<a href="#" class="month_selector_next{{^show_next}} n_disabled{{/show_next}}" data-btn-next></a>
